@@ -23,7 +23,9 @@ type ProductRepository struct {
 }
 
 func NewProductRepository(dbPool *pgxpool.Pool) IProductRepository { //burada implamente ediyoruz
-	return &ProductRepository{dbPool: dbPool}
+	return &ProductRepository{
+		dbPool: dbPool,
+	}
 }
 
 func (productRepository *ProductRepository) GetAllProducts() []domain.Product {

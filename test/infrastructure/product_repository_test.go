@@ -27,8 +27,8 @@ func TestMain(m *testing.M) {
 		"10",
 		"30s",
 	})
-	productRepository = persistence.NewProductRepository(dbPool) //dbpool objesini oluşturduk
-	exitCode := m.Run()                                          //tüm testleri çalıştırdığımız kod burası olucak
+	productRepository = persistence.NewProductRepository(dbPool)
+	exitCode := m.Run()
 	os.Exit(exitCode)
 
 }
